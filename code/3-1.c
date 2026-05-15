@@ -14,7 +14,7 @@ int compute(int a, int b, BinOp op){
     BinOp mul = mul;
 
     if(op==NULL){
-        printf("Null Pointer\n");
+        printf("Null pointer\n");
         return -1;
     }
 
