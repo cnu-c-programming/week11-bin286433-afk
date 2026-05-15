@@ -11,7 +11,15 @@ void print_state(enum State s){
             break;
         case RUNNING:
             printf("State: RUNNING\n");
-            break;    
+            break;   
+            
+        default: printf("Unknown state\n");    
+        // case PAUSED:
+        //     printf("State: PAUSED\n");
+        //     break;    
+        // case DONE:
+        //     printf("State: DONE\n");
+        //     break;    
     }
 }
 
