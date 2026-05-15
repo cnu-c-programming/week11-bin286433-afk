@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef int (*BinOp)(int, int);
+
+int add(int a, int b){ return a+b;}
+int sub(int a, int b){ return a-b;}
+int mul(int a, int b){ return a*b;}
+
+int compute(int a, int b, BinOp op){
+    BinOp add = add;
+    BinOp sub = sub;
+    BinOp mul = mul;
+
+    if(op==NULL){
+        printf("Null Pointer\n");
+        return -1;
+    }
+
+    return op(a, b);
+
+}
+
+int main(void) {
+    int a = 10, b = 5;
+   
+    printf("%d\n", compute(a, b, add));
+    printf("%d\n", compute(a, b, sub));
+    printf("%d\n", compute(a, b, mul));
+    printf("%d\n", compute(a, b, NULL));
+
+
+    return 0;
+}
